@@ -4,37 +4,36 @@ import java.util.Map;
 import java.util.Set;
 
 //https://algorithms.tutorialhorizon.com/weighted-graph-implementation-java/
-public class Graph<T>
+public class Graph<NT, D>
 {
     private int nodeNumber;
-    private Node<T> root;
-    private Map<Node<T>, LinkedList<Edge<T>>> adjacencyMap; //todo may convert this to map<node, list>
+    private Node<NT> root;
+    private Map<Node<NT>, LinkedList<Edge<NT, D>>> adjacencyMap;
 
     public Graph() {} // todo remove this
 
-    public Graph(Node<T> root, int nodeNumber)
+    public Graph(Node<NT> root, int nodeNumber)
     {
         this.root = root;
         this.nodeNumber = nodeNumber;
         adjacencyMap = new HashMap<>(nodeNumber);
-
-//        //initialize adjacency lists for all the nodes
-//        for (int i = 0; i <nodeNumber ; i++)
-//        {
-//            adjacencyList[i] = new LinkedList<>();
-//        }
     }
 
     //for directed graph
-    public void addEdge(Node<T> source, Node<T> destination)
+    public void addEdge(Node<NT> source, Node<NT> destination)
     {
-        Edge<T> edge = new Edge<>(source, destination);
+        addEdge(source, destination, null);
+    }
+
+    public void addEdge(Node<NT> source, Node<NT> destination, D data)
+    {
+        Edge<NT, D> edge = new Edge<>(source, destination, data);
 
         if (adjacencyMap.containsKey(source)) // old key
             adjacencyMap.get(source).add(edge);
         else // new key
         {
-            LinkedList<Edge<T>> newList  = new LinkedList<>();
+            LinkedList<Edge<NT, D>> newList  = new LinkedList<>();
             newList.add(edge);
             adjacencyMap.put(source, newList);
         }
@@ -42,28 +41,15 @@ public class Graph<T>
     }
 
 
-    //for debugging
-    public void printGraph()
-    {
-        Set<Node<T>> nodeSet  = adjacencyMap.keySet();
-        for (Node<T> node : nodeSet)
-        {
-            LinkedList<Edge<T>> list = adjacencyMap.get(node);
-            for (int j = 0; j < list.size() ; j++)
-            {
-                System.out.println("node-" + node + " is connected to " +
-                        list.get(j).getDestination());  //todo toString methods
-            }
-        }
-    }
 
-    public Node<T> getRoot()
+
+    public Node<NT> getRoot()
     {
         return root;
     }
 
 
-    public boolean isLeaf(Node<T> node) //todo maybe just have a boolean inside the node class to tell if it is a leaf or not
+    public boolean isLeaf(Node<NT> node) //todo maybe just have a boolean inside the node class to tell if it is a leaf or not
     {
         if (adjacencyMap.get(node) == null)
             return true;
@@ -73,23 +59,26 @@ public class Graph<T>
             return false;
     }
 
-    public LinkedList<Edge<T>> edgesComingOutOfNode(Node<T> node)
+    public LinkedList<Edge<NT, D>> edgesComingOutOfNode(Node<NT> node)
     {
         return adjacencyMap.get(node);
     }
 
+
+
+    //for debugging
     @Override
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
-        Set<Node<T>> keys = adjacencyMap.keySet();
-        LinkedList<Edge<T>> list;
+        Set<Node<NT>> keys = adjacencyMap.keySet();
+        LinkedList<Edge<NT, D>> list;
 
-        for (Node<T> node : keys)
+        for (Node<NT> node : keys)
         {
             list = adjacencyMap.get(node);
 
-            for (Edge<T> data : list)
+            for (Edge<NT, D> data : list)
                 sb.append(data).append("\n");;
         }
 

@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3dfca26-687b-4e4b-99b4-b7a0f18c46af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/GraphReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GraphReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/GraphReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GraphGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphSearch/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphSearch/Edge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphSearch/Finder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphSearch/Finder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphSearch/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphSearch/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphSearch/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphSearch/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphSearch/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphSearch/Trie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/GraphSearch/GraphReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Finder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -47,9 +57,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="GraphReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GraphReader" />
+    <configuration name="GraphGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GraphGenerator" />
       <module name="GraphSearch" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,7 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GraphReader" />
+        <item itemvalue="Application.GraphGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614821619586</updated>
-      <workItem from="1614821625475" duration="19763000" />
+      <workItem from="1614821625475" duration="21819000" />
     </task>
     <servers />
   </component>
@@ -108,30 +123,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser" timestamp="1614974975698">
+    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser" timestamp="1614982623934">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser/0.23.1440.797@0.23.1440.797" timestamp="1614974975698" />
+    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser/0.23.1440.797@0.23.1440.797" timestamp="1614982623934" />
     <state x="377" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614859801687">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="377" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.797@0.23.1440.797" timestamp="1614859801687" />
-    <state width="1398" height="394" key="GridCell.Tab.0.bottom" timestamp="1614981137584">
+    <state width="1398" height="394" key="GridCell.Tab.0.bottom" timestamp="1614983351789">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1398" height="394" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1614981137584" />
-    <state width="1398" height="394" key="GridCell.Tab.0.center" timestamp="1614981137581">
+    <state width="1398" height="394" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1614983351789" />
+    <state width="1398" height="394" key="GridCell.Tab.0.center" timestamp="1614983351788">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1398" height="394" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1614981137581" />
-    <state width="1398" height="394" key="GridCell.Tab.0.left" timestamp="1614981137579">
+    <state width="1398" height="394" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1614983351788" />
+    <state width="1398" height="394" key="GridCell.Tab.0.left" timestamp="1614983351787">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1398" height="394" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1614981137579" />
-    <state width="1398" height="394" key="GridCell.Tab.0.right" timestamp="1614981137582">
+    <state width="1398" height="394" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1614983351787" />
+    <state width="1398" height="394" key="GridCell.Tab.0.right" timestamp="1614983351788">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1398" height="394" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1614981137582" />
+    <state width="1398" height="394" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1614983351788" />
     <state width="1398" height="364" key="GridCell.Tab.1.bottom" timestamp="1614978738389">
       <screen x="0" y="23" width="1440" height="797" />
     </state>

@@ -1,7 +1,7 @@
-public class GraphReader
+public class GraphGenerator
 {
 
-    public Graph<Integer> createAGraph()
+    public Graph<Integer, Object> createAGraph()
     {
         Node<Integer> source = new Node<>(1);
 
@@ -17,7 +17,7 @@ public class GraphReader
         Node<Integer> n12 = new Node<>(12);
         Node<Integer> n15 = new Node<>(15);
 
-        Graph<Integer> graph = new Graph<>(source, 12);
+        Graph<Integer, Object> graph = new Graph<>(source, 12);
         graph.addEdge(source, n2);
         graph.addEdge(source, n100);
 
@@ -46,16 +46,17 @@ public class GraphReader
 
     public void find()
     {
-        Graph<Integer> graph = createAGraph();
+        Graph<Integer, Object> graph = createAGraph();
         System.out.println(graph);
 
         System.out.println("-----------------");
 
-        Finder<Integer> finder = new Finder<>();
+        Finder<Integer, Object> finder = new Finder<>();
 
-        finder.runFinder(graph, 8); //todo or 7
+        Edge<Integer, Object> initEdge = new Edge<>(null, graph.getRoot());
+        finder.runFinder(graph, initEdge, 0); //todo or 7
 
-        Trie<Edge<Integer>> trie = finder.getTrie();
+        Trie<Edge<Integer, Object>> trie = finder.getTrie();
 
         System.out.println("all pathes: ");
         System.out.println(trie);
@@ -63,7 +64,7 @@ public class GraphReader
     }
 
     public static void main(String[] args) {
-        GraphReader generator =  new GraphReader();
+        GraphGenerator generator =  new GraphGenerator();
         generator.find();
     }
 

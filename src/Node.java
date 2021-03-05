@@ -7,6 +7,10 @@ public class Node<T>
         this.data = data;
     }
 
+    public T getData() {
+        return data;
+    }
+
     @Override
     public String toString() {
         return "n" + data.toString() + "";

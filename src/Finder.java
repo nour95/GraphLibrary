@@ -1,25 +1,21 @@
-import java.util.LinkedList;
-
-public class Finder<T>
+public class Finder<NT, D>
 {
 
-    private Trie<Edge<T>> trie = new Trie<>();
+    private Trie<Edge<NT, D>> trie = new Trie<>();
 
-    public void runFinder(Graph<T> graph, int depth)
+    public void runFinder(Graph<NT, D> graph, Edge<NT, D> initialEdgeWithoutHead, int depth)
     {
         // set a destination to this edge ..
-        Node<T> root = graph.getRoot();
-        Edge<T> initialEdgeWithoutHead = new Edge<>(null, root);
+        Node<NT> root = graph.getRoot();
 
-
-        trie.addInitialEdge(initialEdgeWithoutHead); //todo
-        TrieNode<Edge<T>> source = trie.getRoot();
+        trie.addInitialEdge(initialEdgeWithoutHead);
+        TrieNode<Edge<NT, D>> source = trie.getRoot();
 
         findAllPaths(graph, depth, 1, initialEdgeWithoutHead, source);
     }
 
 
-    private void findAllPaths(Graph<T> graph, int depth,  int currentLevel, Edge<T> parentEdge, TrieNode<Edge<T>> parentTrieNode)
+    private void findAllPaths(Graph<NT, D> graph, int depth, int currentLevel, Edge<NT, D> parentEdge, TrieNode<Edge<NT, D>> parentTrieNode)
     {
         if(depth == 0)
             return;
@@ -27,11 +23,11 @@ public class Finder<T>
             return;
 
         //LinkedList<Edge<T>> x = graph.edgesComingOutOfNode(parentEdge.getDestination());
-        for (Edge<T> outGoingEdge : graph.edgesComingOutOfNode(parentEdge.getDestination())) // todo and think where to put it
+        for (Edge<NT, D> outGoingEdge : graph.edgesComingOutOfNode(parentEdge.getDestination())) // todo and think where to put it
         {
 
             //Node<Edge<T>> childNode = new Node<Edge<T>>(outGoingEdge);
-            TrieNode<Edge<T>> childTrieNode = trie.createTrieNode(outGoingEdge, currentLevel, parentTrieNode); //
+            TrieNode<Edge<NT, D>> childTrieNode = trie.createTrieNode(outGoingEdge, currentLevel, parentTrieNode); //
 
             trie.add(childTrieNode, parentTrieNode);
             findAllPaths(graph, depth - 1, currentLevel + 1, outGoingEdge, childTrieNode);
@@ -44,7 +40,7 @@ public class Finder<T>
 
     }
 
-    public Trie<Edge<T>> getTrie()
+    public Trie<Edge<NT, D>> getTrie()
     {
         return trie;
     }
