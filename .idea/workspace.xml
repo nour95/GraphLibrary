@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3dfca26-687b-4e4b-99b4-b7a0f18c46af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/GraphReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GraphReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pGuCM8NsUdko893YuuO4wTYwoX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GraphReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GraphReader" />
+      <module name="GraphSearch" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GraphReader" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../period1/CC/labs/Assignment" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../sda/sda8/test-sda/lab1" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3dfca26-687b-4e4b-99b4-b7a0f18c46af" name="Default Changelist" comment="" />
+      <created>1614821619586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614821619586</updated>
+      <workItem from="1614821625475" duration="19763000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser" timestamp="1614974975698">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="533" y="112" key="#com.intellij.ide.util.MemberChooser/0.23.1440.797@0.23.1440.797" timestamp="1614974975698" />
+    <state x="377" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614859801687">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="377" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.797@0.23.1440.797" timestamp="1614859801687" />
+    <state width="1398" height="394" key="GridCell.Tab.0.bottom" timestamp="1614981137584">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="394" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1614981137584" />
+    <state width="1398" height="394" key="GridCell.Tab.0.center" timestamp="1614981137581">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="394" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1614981137581" />
+    <state width="1398" height="394" key="GridCell.Tab.0.left" timestamp="1614981137579">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="394" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1614981137579" />
+    <state width="1398" height="394" key="GridCell.Tab.0.right" timestamp="1614981137582">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="394" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1614981137582" />
+    <state width="1398" height="364" key="GridCell.Tab.1.bottom" timestamp="1614978738389">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="364" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1614978738389" />
+    <state width="1398" height="364" key="GridCell.Tab.1.center" timestamp="1614978738389">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="364" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1614978738389" />
+    <state width="1398" height="364" key="GridCell.Tab.1.left" timestamp="1614978738388">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="364" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1614978738388" />
+    <state width="1398" height="364" key="GridCell.Tab.1.right" timestamp="1614978738389">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="364" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1614978738389" />
+    <state x="386" y="178" width="667" height="486" key="find.popup" timestamp="1614976043537">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="386" y="178" width="667" height="486" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1614976043537" />
+    <state x="338" y="144" width="764" height="676" key="search.everywhere.popup" timestamp="1614974959806">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="338" y="144" width="764" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1614974959806" />
+  </component>
+</project>

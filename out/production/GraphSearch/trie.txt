@@ -1,0 +1,44 @@
+import java.util.LinkedList;
+import java.util.Map;
+
+public class Trie<T>
+{
+    private TrieNode<T> source;
+    private Map<TrieNode<T>, LinkedList<TrieNode<T>>> neighbours;
+
+    // can't be a map because we may have duplicate nodes
+    /*
+    d0:            e0
+    d1:        e1     e2
+    d2:      e1 e3
+
+    idea 1: have a list of lists (the lists represent the nodes of the trie) and the index of the list represent the depth.
+    idea 2: have and id inside each node, this id can represent the depth in the array and aparent to distinguish between them
+
+     */
+
+    public void addInitialEdge(T initDataWithoutHead)
+    {
+        source = new TrieNode<>(initDataWithoutHead, 0, null);
+        neighbours.put(source, new LinkedList<>());
+    }
+
+
+    public void add(T newEdge, TrieNode<T> parentNode, int level)
+    {
+        //todo
+        TrieNode<T> childNode = new TrieNode<>(newEdge, level, parentNode);
+    }
+
+
+    public TrieNode<T> createTrieNode(T outGoingEdge, int currentLevel, TrieNode<T> parentTrieNode)
+    {
+        return new TrieNode<T>(outGoingEdge, currentLevel, parentTrieNode);
+    }
+
+
+    public TrieNode<T> getSource() {
+        return source;
+    }
+
+}
