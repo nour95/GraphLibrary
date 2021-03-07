@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 //https://algorithms.tutorialhorizon.com/weighted-graph-implementation-java/
 /**
@@ -65,12 +62,12 @@ public class Graph<NDT, EDT>
             return false;
     }
 
-    public LinkedList<Edge<NDT, EDT>> edgesComingOutOfNode(Node<NDT> node)
+    public List<Edge<NDT, EDT>> edgesComingOutOfNode(Node<NDT> node)
     {
         return adjacencyMap.get(node);
     }
 
-
+    public Set<Node<NDT>> getNodes() { return adjacencyMap.keySet(); }
 
     //for debugging
     @Override
