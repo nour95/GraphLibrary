@@ -2,16 +2,20 @@ package graph;
 
 import java.util.Objects;
 
-public class Node<D>
+/**
+ * NDT (Node Data Type; type of the data content in the node)
+ * EDT (Edge Data Type; type of the data content in the edge)
+ */
+public class Node<NDT>
 {
-    private D data;
+    private NDT data;
 
-    public Node(D data)
+    public Node(NDT data)
     {
         this.data = data;
     }
 
-    public D getData() {
+    public NDT getData() {
         return data;
     }
 

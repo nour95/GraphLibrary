@@ -2,19 +2,23 @@ package graph;
 
 import java.util.Objects;
 
-public class Edge<NT, D> implements EdgeWrapper<NT>
+/**
+ * NDT (Node Data Type; type of the data content in the node)
+ * EDT (Edge Data Type; type of the data content in the edge)
+ */
+public class Edge<NDT, EDT> implements EdgeWrapper<NDT>
 {
-    private Node<NT> from;
-    private Node<NT> to;
-    private D data;
+    private Node<NDT> from;
+    private Node<NDT> to;
+    private EDT data;
 
-    public Edge(Node<NT> from, Node<NT> to) {
+    public Edge(Node<NDT> from, Node<NDT> to) {
         this.from = from;
         this.to = to;
         this.data = null;
     }
 
-    public Edge(Node<NT> from, Node<NT> to, D data)
+    public Edge(Node<NDT> from, Node<NDT> to, EDT data)
     {
         this.from = from;
         this.to = to;
@@ -22,15 +26,15 @@ public class Edge<NT, D> implements EdgeWrapper<NT>
     }
 
 
-    public Node<NT> getDestination() {
+    public Node<NDT> getDestination() {
         return to;
     }
 
-    public Node<NT> getSource() {
+    public Node<NDT> getSource() {
         return from;
     }
 
-    public D getData() {
+    public EDT getData() {
         return data;
     }
 
