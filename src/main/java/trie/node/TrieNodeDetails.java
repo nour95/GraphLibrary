@@ -7,18 +7,15 @@ public class TrieNodeDetails<T> implements TrieNode<T>
     private T data;
     private int level; // level
     private TrieNodeDetails<T> parent;
-    private boolean visited; //todo may be already in the graph
-
-    public TrieNodeDetails(T data)
-    {
-        this.data = data;
-    }
+    private boolean visited;
 
     public TrieNodeDetails(T data, int level, TrieNodeDetails<T> parent)
     {
         this.data = data;
         this.level = level;
         this.parent = parent;
+        this.visited = false;
+
     }
 
     public T getData() {
@@ -44,6 +41,17 @@ public class TrieNodeDetails<T> implements TrieNode<T>
     public void setParent(TrieNodeDetails<T> parent) {
         this.parent = parent;
     }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
+
 
     @Override
     public boolean equals(Object o) {

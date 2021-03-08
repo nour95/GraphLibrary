@@ -23,6 +23,17 @@ public class RawTrieNode<T> implements TrieNode<T>
         this.data = data;
     }
 
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
