@@ -1,5 +1,9 @@
 package trie;
 
+import trie.node.RawTrieNode;
+import trie.node.TrieNode;
+import trie.node.TrieNodeDetails;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -9,17 +13,18 @@ public class Trie<T>
 {
     private TrieNode<T> root;
     private Map<TrieNode<T>, LinkedList<TrieNode<T>>> neighbours = new HashMap<>();
+    private final boolean removeLoops;
 
-    // can't be a map because we may have duplicate nodes
-    /*
-    d0:            e0
-    d1:        e1     e2
-    d2:      e1 e3
+    // the standard case will be to: visit the loop only once if it is a normal loop or self loop
+    public Trie()
+    {
+        this(true);
+    }
 
-    idea 1: have a list of lists (the lists represent the nodes of the trie) and the index of the list represent the depth.
-    idea 2: have and id inside each node, this id can represent the depth in the array and aparent to distinguish between them
-
-     */
+    public Trie(boolean removeLoops)
+    {
+        this.removeLoops = removeLoops;
+    }
 
     public void addInitialEdge(T initDataWithoutHead)
     {
@@ -36,15 +41,22 @@ public class Trie<T>
             return;
         }
 
-        parentsAllChildren.add(newNode);
+        if (!parentsAllChildren.contains(newNode))
+            parentsAllChildren.add(newNode);
 
     }
 
 
     public TrieNode<T> createTrieNode(T newNode, int currentLevel, TrieNode<T> parentTrieNode)
     {
-        TrieNode<T> trieNode = new TrieNode<T>(newNode, currentLevel, parentTrieNode);
-        neighbours.put(trieNode, new LinkedList<TrieNode<T>>());
+        TrieNode<T> trieNode;
+        if(removeLoops)
+            trieNode = new RawTrieNode<T>(newNode);
+        else
+            trieNode = new TrieNodeDetails<T>(newNode, currentLevel, (TrieNodeDetails<T>) parentTrieNode);
+
+        if (!neighbours.containsKey(trieNode))
+            neighbours.put(trieNode, new LinkedList<TrieNode<T>>());
         return trieNode;
     }
 
@@ -90,3 +102,4 @@ public class Trie<T>
 
     }
 }
+

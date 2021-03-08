@@ -1,12 +1,21 @@
-package graph;
+package org.example;
 
+import graph.Edge;
+import graph.Graph;
+import graph.Node;
+import trie.node.TrieNode;
 import trie.Trie;
-import trie.TrieNode;
 
 public class Finder<NT, D>
 {
 
-    private Trie<Edge<NT, D>> trie = new Trie<>();
+    private Trie<Edge<NT, D>> trie;
+
+    public Finder(boolean removeLoops)
+    {
+        this.trie = new Trie<>(removeLoops);
+    }
+
 
     public void runFinder(Graph<NT, D> graph, Edge<NT, D> initialEdgeWithoutHead, int depth)
     {
@@ -39,11 +48,14 @@ public class Finder<NT, D>
 
         }
 
-
-
-
-
     }
+
+
+
+
+
+
+
 
     public Trie<Edge<NT, D>> getTrie()
     {
