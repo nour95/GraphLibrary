@@ -4,8 +4,6 @@ import graph.Edge;
 import graph.Graph;
 import graph.Node;
 import trie.Trie;
-import trie.TrieNoLoops;
-import trie.TrieWithLoops;
 
 public class GraphGenerator
 {
@@ -60,7 +58,7 @@ public class GraphGenerator
 
         System.out.println("-----------------");
 
-        Finder<Integer, Object> finder = new Finder<>( new TrieNoLoops<>() );
+        Finder<Integer, Object> finder = new Finder<>( true );
 
         Edge<Integer, Object> initEdge = new Edge<>(null, graph.getRoot());
         finder.runFinder(graph, initEdge, 4); //todo or 7

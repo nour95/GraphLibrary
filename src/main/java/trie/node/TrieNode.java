@@ -1,4 +1,4 @@
-package trie;
+package trie.node;
 
 public interface TrieNode<T>
 {

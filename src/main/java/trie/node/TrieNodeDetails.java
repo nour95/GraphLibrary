@@ -1,4 +1,4 @@
-package trie;
+package trie.node;
 
 import java.util.Objects;
 

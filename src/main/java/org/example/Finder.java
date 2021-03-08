@@ -3,17 +3,17 @@ package org.example;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import trie.node.TrieNode;
 import trie.Trie;
-import trie.TrieNode;
 
 public class Finder<NT, D>
 {
 
     private Trie<Edge<NT, D>> trie;
 
-    public Finder(Trie<Edge<NT, D>> trie)
+    public Finder(boolean removeLoops)
     {
-        this.trie = trie;
+        this.trie = new Trie<>(removeLoops);
     }
 
 
