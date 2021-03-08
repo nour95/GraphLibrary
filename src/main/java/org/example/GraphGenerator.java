@@ -1,6 +1,11 @@
-package graph;
+package org.example;
 
+import graph.Edge;
+import graph.Graph;
+import graph.Node;
 import trie.Trie;
+import trie.TrieNoLoops;
+import trie.TrieWithLoops;
 
 public class GraphGenerator
 {
@@ -55,15 +60,15 @@ public class GraphGenerator
 
         System.out.println("-----------------");
 
-        Finder<Integer, Object> finder = new Finder<>();
+        Finder<Integer, Object> finder = new Finder<>( new TrieNoLoops<>() );
 
         Edge<Integer, Object> initEdge = new Edge<>(null, graph.getRoot());
-        finder.runFinder(graph, initEdge, 0); //todo or 7
+        finder.runFinder(graph, initEdge, 4); //todo or 7
 
-        Trie<Edge<Integer, Object>> trie = finder.getTrie();
+        Trie<Edge<Integer, Object>> trieWithLoops = finder.getTrie();
 
         System.out.println("all pathes: ");
-        System.out.println(trie);
+        System.out.println(trieWithLoops);
 
     }
 
