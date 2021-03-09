@@ -1,4 +1,4 @@
-package org.example;
+package generator;
 
 import graph.Edge;
 import graph.Graph;
