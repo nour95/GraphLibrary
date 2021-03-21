@@ -6,9 +6,20 @@ public class RawTrieNode<T> implements TrieNode<T>
 {
 
     private T data;
-    private boolean visited; //todo may be already in the graph
+    private int level; // level
+    private TrieNodeDetails<T> parent;
+    private boolean visited;
 
-    public RawTrieNode(T data)
+    public RawTrieNode(T data, int level, TrieNodeDetails<T> parent)
+    {
+        this.data = data;
+        this.level = level;
+        this.parent = parent;
+        this.visited = false;
+
+    }
+
+    public RawTrieNode(T data) //todo delete this completely
     {
         this.data = data;
         visited = false;
@@ -31,7 +42,9 @@ public class RawTrieNode<T> implements TrieNode<T>
         this.visited = visited;
     }
 
-
+    public TrieNode<T> getParent() {
+        return parent;
+    }
 
 
     @Override

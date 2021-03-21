@@ -66,6 +66,82 @@ public class Trie<T>
 
 
 
+    //---------------------------------
+
+    // methods for modbat:
+    public LinkedList<TrieNode<T>> getChildren(TrieNode<T> parent)
+    {
+        return neighbours.get(parent);
+    }
+
+
+    public void markAsVisit(TrieNode<T> node2)
+    {
+        TrieNodeDetails<T> node = (TrieNodeDetails) node2; //todo
+
+        if (isLeaf(node))
+        {
+            node.setVisited(true); // set the leaf
+
+            // set the leaf's parent:
+            TrieNode<T> parent = node.getParent();
+
+
+        }
+    }
+
+    public boolean hasUnVisitedChildren(TrieNode<T> node)
+    {
+        // a more efficient way is store the number of unvisited children in the trieNode (-1 if unknown to be calculated later), 0 if no more unvisited children
+        // and decrese the number each time we set a leaf. and so on until we reach the source
+        return false;
+    }
+
+    public boolean isLeaf(TrieNode<T> node)
+    {
+        return  (neighbours.get(node) == null) || neighbours.get(node).isEmpty(); //todo not sure about the null thing
+    }
+
+
+    public TrieNode<T> findUnvisitedNode(TrieNode<T> parent)
+    {
+        LinkedList<TrieNode<T>> childrenList =  neighbours.get(parent);
+
+        for (TrieNode<T> node : childrenList)
+        {
+            if (! node.isVisited())
+                return node;
+            //todo else remove from list ?? increase effeicincy
+
+        }
+
+
+        return null;
+    }
+
+
+    public void markVisitedUpToTheFirstParentWithUnvisitedNode(TrieNode<T> child)
+    {
+        child.setVisited(true);
+
+        for (TrieNode<T> currentNode = child.getParent() ; findUnvisitedNode(currentNode) == null ; currentNode = currentNode.getParent() )
+        {
+            currentNode.setVisited(true);
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Override
@@ -93,10 +169,6 @@ public class Trie<T>
 
 
         }
-
-
-
-
 
         return sb.toString();
 

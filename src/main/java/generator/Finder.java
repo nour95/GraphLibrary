@@ -17,6 +17,7 @@ public class Finder<NT, D>
     }
 
 
+    //todo have this as atatic method that take the type
     public void runFinder(Graph<NT, D> graph, Edge<NT, D> initialEdgeWithoutHead, int depth)
     {
         // set a destination to this edge ..

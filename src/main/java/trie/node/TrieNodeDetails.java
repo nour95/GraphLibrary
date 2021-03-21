@@ -34,7 +34,7 @@ public class TrieNodeDetails<T> implements TrieNode<T>
         this.level = level;
     }
 
-    public TrieNodeDetails<T> getParent() {
+    public TrieNode<T> getParent() {
         return parent;
     }
 
